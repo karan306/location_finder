@@ -71,6 +71,6 @@ rm -r neg_test_images
 rm -r classifier
 rm -r samples
 rm *.txt
-rm *.xml
+# rm *.xml
 
 
