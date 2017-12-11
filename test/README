@@ -1,8 +1,9 @@
 1. open this directory in terminal.
 2. fire "source create_haar_cascade.sh"
 3. give the required inputs
-	**Note the path to folders should be given as home/username(i.e your 		username)/path
-	To reduce the no. of samples created during haar cascading, go to line 		52 and set the number accordingly. Currently its 2500.
-	Again, to change the no. of Positive and Negative images used in 		training, set the value of numPos and numNeg accordingly(line 58 and 		59). Remember that numPos and numNeg must be smaller than no. of 		samples.
+	**Note the path to folders should be given as home/username(i.e your username)/path
+	To reduce the no. of samples created during haar cascading, go to line 52 and set the number accordingly. Currently its 2500.
+	Again, to change the no. of Positive and Negative images used in training, set the value of numPos and numNeg accordingly(line 58 and 59).
+	Remember that numPos and numNeg must be smaller than no. of samples.
 4. Done.
 
