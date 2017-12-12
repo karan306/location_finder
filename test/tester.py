@@ -2,42 +2,25 @@ import cv2
 import numpy as numpy
 import os, sys
 
-inp = input()
-params = inp.split()
-cascade_file=params[0]
+def tester(cascade_file,pos_path,neg_path,min_size):
+	obj_cascade = cv2.CascadeClassifier(cascade_file)
+	pcount,ptotal= test_on(pos_path,obj_cascade,min_size)
+	print(pcount,"of",ptotal,"detections in positive images")
+	ncount,ntotal= test_on(neg_path,obj_cascade,min_size)
+	print(ncount,"of",ntotal,"detections in negative images")
 
-pos_path=params[1]
-print(pos_path)
-pos_dirs=os.listdir( pos_path )
 
-obj_cascade = cv2.CascadeClassifier(cascade_file)
-
-pos_count=0
-pos_total=0
-
-for file in pos_dirs:
-	img = cv2.imread(pos_path+file)
-	gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-	lis = obj_cascade.detectMultiScale(gray,1.2,6,0,(100,100))
-	pos_total=pos_total+1
-	if (len(lis)!=0):
-		pos_count=pos_count+1
-
-print(pos_count,"out of",pos_total,"correct detections in positive images")
-
-neg_path=params[2]
-print(neg_path)
-neg_dirs=os.listdir( neg_path )
-
-neg_count=0
-neg_total=0
-
-for file in neg_dirs:
-	img = cv2.imread(neg_path+file)
-	gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-	lis = obj_cascade.detectMultiScale(gray,1.2,6,0,(100,100))
-	neg_total=neg_total+1
-	if (len(lis)!=0):
-		neg_count=neg_count+1
-
-print(neg_count,"out of",neg_total,"correct detections in negative images")
+def test_on(path,obj_cascade,min_size):
+	if(path[len(path)-1]!='/'):
+		path = path+'/'
+	dirs = os.listdir(path)
+	count= 0
+	total= 0
+	for file in dirs:
+		img = cv2.imread(path+file)
+		gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+		lis = obj_cascade.detectMultiScale(gray,1.2,6,0,min_size)
+		total+=1
+		if (len(lis)!=0):
+			count+=1
+	return [count,total]
