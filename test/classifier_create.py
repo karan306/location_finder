@@ -104,6 +104,7 @@ def create(name,pfolder,nfolder,ratio,num_samples,min_size):
 
 
 if __name__=='__main__' :
-    pfolder=input("Positive images folder:")
-    nfolder=input("Negative images folder:")
+    pfolder,nfolder=get_args()
+    # pfolder=input("Positive images folder:")
+    # nfolder=input("Negative images folder:")
     create("Taj",pfolder,nfolder,1,100,(100,100))
