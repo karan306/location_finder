@@ -1,8 +1,7 @@
 1. open this directory in terminal.
-2. run "python3 classifier_create.py"
-3. give the required inputs (positive images folder and negative images folder)
+2. run "python3 classifier_create.py -h"
+3. run "python3 classifier_create.py parameters"
+4. give the required inputs (positive images folder and negative images folder)
 	**Note the path to folders should be given as home/username(i.e your username)/path
-	Some parameters can be changed from the [if __name__=='main':] part.
-	min_size is the min_size of the object in pixels, which will be used in testing.
-4. Done.
+
 
