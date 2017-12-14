@@ -2,6 +2,6 @@
 2. run "python3 classifier_create.py -h"
 3. run "python3 classifier_create.py parameters"
 4. give the required inputs (positive images folder and negative images folder)
-	**Note the path to folders should be given as home/username(i.e your username)/path
+	**Note the path to folders should be given as /home/username(i.e your username)/path
 
 
