@@ -130,7 +130,7 @@ if __name__=='__main__' :
     parser.add_argument('--sf',help="Scale Factor, specifying how much the image size is reduced at each image scale.")
     parser.add_argument('--mn',help="MinNeighbours, specifying how many neighbors each candidate rectangle should have to retain it.")
     a= parser.parse_args()
-    create(a.name,a.pfolder,a.nfolder,int(a.hw_ratio),int(a.num_samples),int(a.num_train))
+    create(a.name,a.pfolder,a.nfolder,float(a.hw_ratio),int(a.num_samples),int(a.num_train))
     min_size=(100,100)
     scale_factor=1.2
     min_neighbours=6
