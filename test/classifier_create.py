@@ -4,8 +4,7 @@ from shutil import *
 
 
 cwd = os.getcwd() #current working directory
-# folders = ['pos_train_images','pos_test_images','neg_train_images',
-#     'neg_test_images','positive_images','negative_images','classifier','samples']
+
 
 if __name__=='__main__' :
     parser = argparse.ArgumentParser()
