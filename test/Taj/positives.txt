@@ -1,0 +1,7 @@
+/home/karan/location_finder/test/Taj/positive_images/4.jpg
+/home/karan/location_finder/test/Taj/positive_images/1.jpg
+/home/karan/location_finder/test/Taj/positive_images/7.jpg
+/home/karan/location_finder/test/Taj/positive_images/6.jpg
+/home/karan/location_finder/test/Taj/positive_images/3.jpg
+/home/karan/location_finder/test/Taj/positive_images/2.jpg
+/home/karan/location_finder/test/Taj/positive_images/5.jpg
